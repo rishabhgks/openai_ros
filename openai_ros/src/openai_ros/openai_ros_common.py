@@ -37,7 +37,7 @@ def StartOpenAI_ROS_Environment(task_and_robot_environment_name):
 
 
 class ROSLauncher(object):
-    def __init__(self, rospackage_name, launch_file_name, ros_ws_abspath="/home/rishabh/genesys2_ws"):
+    def __init__(self, rospackage_name, launch_file_name, ros_ws_abspath=os.environ.get('HOME') + "/genesys2_ws"):
 
         self._rospackage_name = rospackage_name
         self._launch_file_name = launch_file_name
