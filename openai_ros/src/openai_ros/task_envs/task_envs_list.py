@@ -172,6 +172,16 @@ def RegisterOpenAI_Ros_Env(task_env, max_episode_steps=10000):
         # import our training environment
         from openai_ros.task_envs.turtlebot2 import turtlebot2_maze
 
+    elif task_env == 'MyTurtleBot2Maze-v1':
+
+        register(
+            id=task_env,
+            entry_point='openai_ros.task_envs.turtlebot2.turtlebot2_maze_2:TurtleBot2MazeEnv',
+            max_episode_steps=max_episode_steps,
+        )
+        # import our training environment
+        from openai_ros.task_envs.turtlebot2 import turtlebot2_maze
+
     elif task_env == 'MyTurtleBot2Wall-v0':
 
         register(

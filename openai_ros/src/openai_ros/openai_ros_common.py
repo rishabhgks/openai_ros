@@ -37,7 +37,7 @@ def StartOpenAI_ROS_Environment(task_and_robot_environment_name):
 
 
 class ROSLauncher(object):
-    def __init__(self, rospackage_name, launch_file_name, ros_ws_abspath="/home/user/simulation_ws"):
+    def __init__(self, rospackage_name, launch_file_name, ros_ws_abspath="/home/rishabh/genesys2_ws"):
 
         self._rospackage_name = rospackage_name
         self._launch_file_name = launch_file_name
@@ -108,7 +108,7 @@ class ROSLauncher(object):
         """
         commands_to_take_effect = "\nIn a new Shell:::>\ncd "+ros_ws_abspath + \
             "\ncatkin_make\nsource devel/setup.bash\nrospack profile\n"
-        commands_to_take_effect2 = "\nIn your deeplearning program execute shell catkin_ws:::>\ncd /home/user/catkin_ws\nsource devel/setup.bash\nrospack profile\n"
+        commands_to_take_effect2 = "\nIn your deeplearning program execute shell catkin_ws:::>\ncd /home/rishabh/genesys2_ws\nsource devel/setup.bash\nrospack profile\n"
 
         ros_ws_src_abspath_src = os.path.join(ros_ws_abspath, "src")
         pkg_path = None
