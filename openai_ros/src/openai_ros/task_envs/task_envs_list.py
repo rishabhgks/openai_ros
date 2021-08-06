@@ -203,6 +203,17 @@ def RegisterOpenAI_Ros_Env(task_env, max_episode_steps=10000):
         # import our training environment
         from openai_ros.task_envs.turtlebot3 import turtlebot3_world
 
+    elif task_env == 'TurtleBot3World-v1':
+
+        register(
+            id=task_env,
+            entry_point='openai_ros.task_envs.turtlebot2.turtlebot2_modworld:TurtleBot2MazeEnv',
+            max_episode_steps=max_episode_steps,
+        )
+
+        # import our training environment
+        from openai_ros.task_envs.turtlebot2 import turtlebot2_modworld
+
     elif task_env == 'WamvNavTwoSetsBuoys-v0':
 
         register(
